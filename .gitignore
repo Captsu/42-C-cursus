@@ -1,0 +1,44 @@
+# Object files
+*.o
+*.obj
+
+# Executables
+*.out
+*.exe
+a.out
+
+# Libraries
+*.a
+*.so
+*.dylib
+
+# Dependency files
+*.d
+
+# Debug / Valgrind
+*.dSYM/
+*.core
+core
+vgcore.*
+
+# VS Code
+.vscode/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Build directories
+build/
+bin/
+obj/
