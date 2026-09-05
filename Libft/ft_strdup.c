@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/05 17:49:59 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/05 20:09:00 by emougeno         ###   ########.fr       */
+/*   Created: 2026/09/05 20:03:35 by emougeno          #+#    #+#             */
+/*   Updated: 2026/09/05 20:10:45 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdlib.h>
+char	*ft_strdup(const char *s)
+{
+	int		i;
+	char	*dest;
 
-size_t	ft_strlen(const char *str);
-
-#endif
+	dest = malloc(sizeof(char) * ft_strlen(s) + 1);
+	i = 0;
+	while (s[i])
+	{
+		dest[i] = s[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
