@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sujet.c                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/06 23:08:54 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/06 23:08:57 by emougeno         ###   ########.fr       */
+/*   Created: 2026/09/06 17:59:53 by emougeno          #+#    #+#             */
+/*   Updated: 2026/09/06 22:58:57 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// isalpha
-// isdigit
-// isalnum
-// isascii
-// isprint
-// strlen
-// memset
-// bzero
-// memcpy
-// memmove
-// strlcpy
-// strlcat
-// toupper
-// tolower
-strchr
-strrchr
-// strncmp
-memchr
-memcmp
-// strnstr
-// atoi
-// strdup
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		*(unsigned char *)(s + i) = 0;
+		i++;
+	}
+}

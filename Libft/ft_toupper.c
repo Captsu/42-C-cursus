@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sujet.c                                            :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/06 23:08:54 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/06 23:08:57 by emougeno         ###   ########.fr       */
+/*   Created: 2026/09/06 22:59:10 by emougeno          #+#    #+#             */
+/*   Updated: 2026/09/06 23:04:33 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// isalpha
-// isdigit
-// isalnum
-// isascii
-// isprint
-// strlen
-// memset
-// bzero
-// memcpy
-// memmove
-// strlcpy
-// strlcat
-// toupper
-// tolower
-strchr
-strrchr
-// strncmp
-memchr
-memcmp
-// strnstr
-// atoi
-// strdup
+#include "libft.h"
+
+int	ft_toupper(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
+}

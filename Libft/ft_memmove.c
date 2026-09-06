@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/05 18:02:45 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/07 00:27:03 by emougeno         ###   ########.fr       */
+/*   Created: 2026/09/06 21:43:34 by emougeno          #+#    #+#             */
+/*   Updated: 2026/09/06 22:16:11 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t size)
 {
 	size_t	i;
-	size_t	j;
 
 	i = 0;
-	if (ft_strlen(little) == 0)
-		return ((char *) big);
-	while (big[i] && i < len)
+	if (!dest && !src)
+		return (NULL);
+	if (dest < src)
 	{
-		j = 0;
-		while (big[i + j] && (i + j < len) && big[i + j] == little[j])
-			j++;
-		if (little[j] == '\0')
-			return ((char *) big + i);
-		i++;
+		while (i < size)
+		{
+			*((unsigned char *)dest + i) = *((const unsigned char *)src + i);
+			i++;
+		}
+		return (dest);
 	}
-	return (NULL);
+	else
+	{
+		i = size;
+		while (i > 0)
+		{
+			i--;
+			*((unsigned char *)dest + i) = *((const unsigned char *)src + i);
+		}
+		return (dest);
+	}
 }

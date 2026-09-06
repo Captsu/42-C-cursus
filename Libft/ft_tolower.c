@@ -1,34 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Sujet.c                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/06 23:08:54 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/06 23:08:57 by emougeno         ###   ########.fr       */
+/*   Created: 2026/09/06 23:04:02 by emougeno          #+#    #+#             */
+/*   Updated: 2026/09/06 23:08:30 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// isalpha
-// isdigit
-// isalnum
-// isascii
-// isprint
-// strlen
-// memset
-// bzero
-// memcpy
-// memmove
-// strlcpy
-// strlcat
-// toupper
-// tolower
-strchr
-strrchr
-// strncmp
-memchr
-memcmp
-// strnstr
-// atoi
-// strdup
+#include "libft.h"
+
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		c = c + 32;
+	return (c);
+}
