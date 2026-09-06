@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/05 20:03:35 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/05 20:14:29 by emougeno         ###   ########.fr       */
+/*   Created: 2026/09/06 15:58:04 by emougeno          #+#    #+#             */
+/*   Updated: 2026/09/06 17:36:23 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int		i;
-	char	*dest;
+	size_t	i;
 
-	dest = malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!dest)
-		return (NULL);
 	i = 0;
-	while (s[i])
+	if (!dest || !src)
+		return (0);
+	if (size > 0)
 	{
-		dest[i] = s[i];
-		i++;
+		while (src[i] && i < size - 1)
+		{
+			dest[i] = src[i];
+			i++;
+		}
+		dest[i] = '\0';
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (ft_strlen(src));
 }

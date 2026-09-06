@@ -6,7 +6,7 @@
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 17:49:59 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/05 20:09:00 by emougeno         ###   ########.fr       */
+/*   Updated: 2026/09/05 20:44:56 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <string.h>
 
 size_t	ft_strlen(const char *str);
 
