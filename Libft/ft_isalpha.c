@@ -6,7 +6,7 @@
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 16:14:41 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/05 17:38:18 by emougeno         ###   ########.fr       */
+/*   Updated: 2026/09/09 15:26:10 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,25 @@ int	ft_isalpha(int c)
 	return (0);
 }
 
-// #include <stdio.h>
+/*#define GREEN "\033[1;32m"
+#define RED "\033[1;31m"
+#define RESET "\033[0m"
 
-// int	main(void)
-// {
-// 	char	c;
-// 	char	d;
+int main(void)
+{
+	char	tests[] = {'a', '0', '.'};
+	int i;
 
-// 	c = 'c';
-// 	d = ',';
-// 	printf("c = %d\n, = %d\n", ft_isalpha(c), ft_isalpha(d));
-// 	return (0);
-// }
+	i = 0;
+	while (tests[i])
+	{
+		printf("ft = %d et ori = %d ", ft_isalpha(tests[i]), isalpha(tests[i]));
+		if ((ft_isalpha(tests[i]) == 0 && isalpha(tests[i]) == 0)
+			|| (ft_isalpha(tests[i]) > 0 && isalpha(tests[i]) > 0))
+			printf(GREEN "[OK]\n" RESET);
+		else
+			printf(RED "[KO]\n" RESET);
+		i++;
+	}
+	return (0);
+}*/

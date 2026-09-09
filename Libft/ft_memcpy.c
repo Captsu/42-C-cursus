@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/06 17:59:53 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/09 03:40:10 by emougeno         ###   ########.fr       */
+/*   Created: 2026/09/08 14:52:33 by emougeno          #+#    #+#             */
+/*   Updated: 2026/09/08 15:36:48 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t size)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*s2;
+	unsigned char	*s1;
 
+	if (!dest && !src)
+		return (NULL);
+	s2 = (unsigned char *) dest;
+	s1 = (unsigned char *) src;
 	i = 0;
-	while (i < n)
+	while (i < size)
 	{
-		*(unsigned char *)(s + i) = 0;
+		s2[i] = s1[i];
 		i++;
 	}
+	return (dest);
 }
 
 // #define GREEN "\033[1;32m"
@@ -30,12 +37,15 @@ void	ft_bzero(void *s, size_t n)
 
 // int main(void)
 // {
-// 	char	testft[10];
-// 	char	testori[10];
+// 	char	src[] = "Hello test 1234";
+// 	char	destft[20];
+// 	char	destori[20];
+// 	int size;
 
-// 	ft_bzero(testft, sizeof(testft));
-// 	bzero(testori, sizeof(testori));
-// 	if (ft_memcmp(testft, testori, sizeof(testft)) == 0)
+// 	size = 15;
+// 	ft_memcpy(destft, src, size);
+// 	memcpy(destori, src, size);
+// 	if (memcmp(destft, destori, sizeof(destft)) == 0)
 // 		printf(GREEN "[OK]\n" RESET);
 // 	else
 // 		printf(RED "[KO]\n" RESET);

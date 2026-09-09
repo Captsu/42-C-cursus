@@ -1,43 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/06 17:59:53 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/09 03:40:10 by emougeno         ###   ########.fr       */
+/*   Created: 2026/09/09 04:38:37 by emougeno          #+#    #+#             */
+/*   Updated: 2026/09/09 05:56:15 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	char	*dest;
+	size_t	len1;
+	size_t	len2;
 
-	i = 0;
-	while (i < n)
-	{
-		*(unsigned char *)(s + i) = 0;
-		i++;
-	}
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	dest = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (!dest)
+		return (NULL);
+	ft_memcpy(dest, s1, len1);
+	ft_memcpy(dest + len1, s2, len2 + 1);
+	return (dest);
 }
-
-// #define GREEN "\033[1;32m"
-// #define RED "\033[1;31m"
-// #define RESET "\033[0m"
 
 // int main(void)
 // {
-// 	char	testft[10];
-// 	char	testori[10];
+// 	char	s1[] = "bonjour ";
+// 	char	s2[] = "les amis";
+// 	char	*dest;
 
-// 	ft_bzero(testft, sizeof(testft));
-// 	bzero(testori, sizeof(testori));
-// 	if (ft_memcmp(testft, testori, sizeof(testft)) == 0)
-// 		printf(GREEN "[OK]\n" RESET);
-// 	else
-// 		printf(RED "[KO]\n" RESET);
+// 	dest = ft_strjoin(s1, s2);
+// 	printf("%s\n", dest);
+// 	free(dest);
 // 	return (0);
 // }

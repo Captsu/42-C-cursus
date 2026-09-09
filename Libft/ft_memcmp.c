@@ -1,44 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/05 17:35:46 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/09 15:28:31 by emougeno         ###   ########.fr       */
+/*   Created: 2026/09/07 02:31:53 by emougeno          #+#    #+#             */
+/*   Updated: 2026/09/09 15:46:58 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	size_t	i;
+
+	i = 0;
+	while (i < n && *(unsigned char *)(s1 + i) == *(unsigned char *)(s2 + i))
+		i++;
+	if (i < n)
+		return (*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
+	return (0);
 }
 
-#define GREEN "\033[1;32m"
+/*#define GREEN "\033[1;32m"
 #define RED "\033[1;31m"
 #define RESET "\033[0m"
 
-/*int main(void)
+int main(void)
 {
-	char	tests[] = {'a', '0', '9', 127, 31, -42};
-	int i;
+	char	s1[] = "Test de memchr";
+	char	s2[] = "Test  de memchr";
 
-	i = 0;
-	while (tests[i])
-	{
-		printf("ft = %d et ori = %d ", ft_isprint(tests[i]), isprint(tests[i]));
-		if ((ft_isprint(tests[i]) == 0 && isprint(tests[i]) == 0)
-			|| (ft_isprint(tests[i]) > 0 && isprint(tests[i]) > 0))
-			printf(GREEN "[OK]\n" RESET);
-		else
-			printf(RED "[KO]\n" RESET);
-		i++;
-	}
+	if (ft_memcmp(s1, s2, 5) == memcmp(s1, s2, 5))
+		printf(GREEN "[OK]\n" RESET);
+	else
+		printf(RED "[KO]\n" RESET);
 	return (0);
 }*/
