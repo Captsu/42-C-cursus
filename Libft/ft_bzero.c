@@ -6,7 +6,7 @@
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/06 17:59:53 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/09 03:40:10 by emougeno         ###   ########.fr       */
+/*   Updated: 2026/09/10 17:56:24 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,20 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-// #define GREEN "\033[1;32m"
-// #define RED "\033[1;31m"
-// #define RESET "\033[0m"
+/*#define GREEN "\033[1;32m"
+#define RED "\033[1;31m"
+#define RESET "\033[0m"
 
-// int main(void)
-// {
-// 	char	testft[10];
-// 	char	testori[10];
+int main(void)
+{
+	char	testft[10];
+	char	testori[10];
 
-// 	ft_bzero(testft, sizeof(testft));
-// 	bzero(testori, sizeof(testori));
-// 	if (ft_memcmp(testft, testori, sizeof(testft)) == 0)
-// 		printf(GREEN "[OK]\n" RESET);
-// 	else
-// 		printf(RED "[KO]\n" RESET);
-// 	return (0);
-// }
+	ft_bzero(testft, sizeof(testft));
+	bzero(testori, sizeof(testori));
+	if (ft_memcmp(testft, testori, sizeof(testft)) == 0)
+		printf(GREEN "[OK]\n" RESET);
+	else
+		printf(RED "[KO]\n" RESET);
+	return (0);
+}*/

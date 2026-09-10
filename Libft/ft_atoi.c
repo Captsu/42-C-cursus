@@ -6,7 +6,7 @@
 /*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 17:41:11 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/08 14:39:47 by emougeno         ###   ########.fr       */
+/*   Updated: 2026/09/10 17:56:24 by emougeno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,35 +38,35 @@ int	ft_atoi(const char *str)
 	return (nb * neg);
 }
 
-// #define GREEN "\033[1;32m"
-// #define RED "\033[1;31m"
-// #define RESET "\033[0m"
+/*#define GREEN "\033[1;32m"
+#define RED "\033[1;31m"
+#define RESET "\033[0m"
 
-// int main(void)
-// {
-// 	char	*tests[] = {
-// 		"42",
-// 		"-42",
-// 		"+42",
-// 		"   ---42",
-// 		"123abc",
-// 		"-00123",
-// 		"0",
-// 		NULL};
-// 	int		i;
+int main(void)
+{
+	char	*tests[] = {
+		"42",
+		"-42",
+		"+42",
+		"   ---42",
+		"123abc",
+		"-00123",
+		"0",
+		NULL};
+	int		i;
 
-// 	i = 0;
-// 	while (tests[i])
-// 	{
-// 		printf("%s: ", tests[i]);
-// 		if (ft_atoi(tests[i]) == atoi(tests[i]))
-// 			printf(GREEN "[OK]\n" RESET);
-// 		else
-// 		{
-// 			printf(RED "[KO]\n" RESET);
-// 			printf("ft: %d  original: %d\n", ft_atoi(tests[i]), atoi(tests[i]));
-// 		}
-// 		i++;
-// 	}
-// 	return (0);
-// }
+	i = 0;
+	while (tests[i])
+	{
+		printf("%s: ", tests[i]);
+		if (ft_atoi(tests[i]) == atoi(tests[i]))
+			printf(GREEN "[OK]\n" RESET);
+		else
+		{
+			printf(RED "[KO]\n" RESET);
+			printf("ft: %d  original: %d\n", ft_atoi(tests[i]), atoi(tests[i]));
+		}
+		i++;
+	}
+	return (0);
+}*/
