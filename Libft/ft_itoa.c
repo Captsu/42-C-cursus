@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/10 17:12:13 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/10 18:39:40 by emougeno         ###   ########.fr       */
+/*   Updated: 2026/09/12 01:48:31 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	itoalen(int n)
+int	itoalen(long n)
 {
 	int	count;
 
@@ -29,43 +29,49 @@ int	itoalen(int n)
 		count++;
 		n = n / 10;
 	}
-	printf("%d\n", count);
 	return (count);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*dest;
-	int		i;
+	long	i;
 	int		nblen;
 
+	i = n;
 	nblen = itoalen(n);
 	dest = malloc(sizeof(char) * (nblen + 1));
 	if (!dest)
 		return (NULL);
-	i = nblen - 1;
-	if (n < 0)
+	dest[nblen] = '\0';
+	if (i < 0)
 	{
-		n = -n;
+		i = -i;
 		dest[0] = '-';
 	}
-	while (n != 0)
+	while (i >= 10)
 	{
-		dest[i] = (n % 10) + 48;
-		n = n / 10;
-		i--;
+		nblen--;
+		dest[nblen] = (i % 10) + '0';
+		i = i / 10;
 	}
-	dest[nblen] = '\0';
-	printf("%s\n", dest);
+	dest[--nblen] = i + '0';
 	return (dest);
 }
 
-/*int main()
+/*int	main(void)
 {
-	char	*test;
+	int		tests[] = { 0, 42, -42, 2147483647,	-2147483648};
+	char	*str;
+	int		i;
 
-	test = ft_itoa(-565410);
-	printf("%s\n", test);
-	free(test);
+	i = 0;
+	while (i < 5)
+	{
+		str = ft_itoa(tests[i]);
+		printf("%s\n", str);
+		free(str);
+		i++;
+	}
 	return (0);
 }*/

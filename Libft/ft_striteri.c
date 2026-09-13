@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/05 17:35:46 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/13 21:13:04 by elise            ###   ########.fr       */
+/*   Created: 2026/09/11 22:25:06 by elise             #+#    #+#             */
+/*   Updated: 2026/09/12 00:30:13 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
 /*#define GREEN "\033[1;32m"
 #define RED "\033[1;31m"
 #define RESET "\033[0m"
 
+void	testf(unsigned int i, char *c)
+{
+	if (i % 2 == 0)
+		*c = *c - 32;
+}
 int main(void)
 {
-	char	tests[] = {'a', '0', '9', 127, 31, -42};
-	int i;
-
-	i = 0;
-	while (tests[i])
-	{
-		printf("ft = %d et ori = %d ", ft_isprint(tests[i]), isprint(tests[i]));
-		if ((ft_isprint(tests[i]) == 0 && isprint(tests[i]) == 0)
-			|| (ft_isprint(tests[i]) > 0 && isprint(tests[i]) > 0))
-			printf(GREEN "[OK]\n" RESET);
-		else
-			printf(RED "[KO]\n" RESET);
-		i++;
-	}
+	char test[] = "test";
+	ft_striteri(test, testf);
+	printf("%s\n", test);
 	return (0);
 }*/

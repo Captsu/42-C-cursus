@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/08 22:49:58 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/10 17:56:24 by emougeno         ###   ########.fr       */
+/*   Updated: 2026/09/13 20:36:42 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t elemcount, size_t size)
 {
 	unsigned char	*dest;
 
+	if (elemcount > SIZE_MAX / size)
+		return (NULL);
 	dest = malloc(size * elemcount);
 	if (!dest)
 		return (NULL);
