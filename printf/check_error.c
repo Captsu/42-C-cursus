@@ -6,16 +6,16 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 19:18:01 by elise             #+#    #+#             */
-/*   Updated: 2026/09/14 21:01:53 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 02:58:38 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft/libft.h"
 #include "ft_printf.h"
 
-int check_error(const char *format)
+int	check_error(const char *format)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (format[i])

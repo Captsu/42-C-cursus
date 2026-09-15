@@ -17,6 +17,7 @@ SRC =	Libft/ft_strlen.c \
 		printer_hexa.c \
 		printer_pourcentage.c \
 		printer_string.c \
+		numlen.c \
 		printer_unsigned_int.c
 
 OBJ = $(SRC:.c=.o)

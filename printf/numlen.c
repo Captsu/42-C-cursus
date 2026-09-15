@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   numlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/13 21:21:25 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 03:22:08 by elise            ###   ########.fr       */
+/*   Created: 2026/09/15 03:49:46 by elise             #+#    #+#             */
+/*   Updated: 2026/09/15 03:55:49 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "Libft/libft.h"
+#include "ft_printf.h"
 
-void	ft_putchar_fd(char c, int fd)
+int	numlen(long n)
 {
-	write(fd, &c, 1);
+	int	count;
+
+	count = 0;
+	if (n < 0)
+	{
+		n = -n;
+		count++;
+	}
+	if (n == 0)
+		count++;
+	while (n != 0)
+	{
+		count++;
+		n = n / 10;
+	}
+	return (count);
 }

@@ -6,26 +6,27 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 19:08:31 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 01:39:23 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 04:11:18 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft/libft.h"
 #include "ft_printf.h"
 
-int printer_adresse(char *str)
+int	printer_adresse(char *str)
 {
 	char	adresse[12];
-	long 	pAdresse;
-	char	base[] = "0123456789abcdef";
-	int	i;
+	long	padresse;
+	char	*base;
+	int		i;
 
+	base = "0123456789abcdef";
 	i = 11;
-	pAdresse = (long)str;
-	while(pAdresse > 0)
+	padresse = (long)str;
+	while (padresse > 0)
 	{
-		adresse[i] = base[pAdresse % 16];
-		pAdresse /= 16;
+		adresse[i] = base[padresse % 16];
+		padresse /= 16;
 		i--;
 	}
 	adresse[12] = 0;

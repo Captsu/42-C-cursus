@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 02:22:50 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 00:57:39 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 03:16:02 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int	printer_decider(char c, va_list	args)
 		count = count + printer_unsigned_int(va_arg(args, unsigned int));
 	else if (c == '%')
 		count = count + printer_pourcentage(c);
-	return(count);	
+	return (count);
 }

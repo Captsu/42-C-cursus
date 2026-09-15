@@ -6,14 +6,14 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 19:56:43 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 01:39:05 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 03:17:57 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft/libft.h"
 #include "ft_printf.h"
 
-int printer_pourcentage(char c)
+int	printer_pourcentage(char c)
 {
 	write(1, &c, 1);
 	return (1);
