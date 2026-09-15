@@ -6,37 +6,38 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 19:54:21 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 03:17:47 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 04:43:44 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Libft/libft.h"
 #include "ft_printf.h"
 
-int	numlen(long n);
-
-int	printer_hexa(int nb, char x)
+int	printer_hexa(unsigned int nb, char format)
 {
-	int		len;
-	char	c;
 	char	*base;
+	char	hexa[9];
+	int		i;
+	int		len;
 
-	base = "0123456789abcdef";
-	c = 0;
-	if (nb > 0)
+	if (format == 'x')
+		base = "0123456789abcdef";
+	else
+		base = "0123456789ABCDEF";
+	if (nb == 0)
 	{
-		printer_hexa(nb / 16, c);
-		if (nb % 16 < 10)
-			ft_putnbr_fd(nb % 16, 1);
-		else
-		{
-			c = base[nb % 16];
-			if (x == 'x')
-				ft_putchar_fd(c, 1);
-			else if (x == 'X')
-				ft_putchar_fd(c - 32, 1);
-		}
+		write(1, "0", 1);
+		return (1);
 	}
-	len = numlen(nb);
+	i = 7;
+	hexa[8] = '\0';
+	while (nb > 0)
+	{
+		hexa[i] = base[nb % 16];
+		nb /= 16;
+		i--;
+	}
+	len = ft_strlen(&hexa[i + 1]);
+	ft_putstr_fd(&hexa[i + 1], 1);
 	return (len);
 }

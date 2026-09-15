@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 01:58:28 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 04:20:04 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 05:12:17 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,12 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-int	main(void)
+/*int	main(void)
 {
-	char	str[] = "test";
-	char	*len;
-	int		count;
-	int		nb;
+	char	*str;
 
-	len = "%d: 20 %s: test %c: A %i: 50 %p: 0x7fff604d4963 %u: 42000 %x: 2a %X: 2A";
-	nb = 20;
-	printf("%%d: %d %%s: %s %%c: %c %%i: %i %%p: %p %%u: %u %%x: %x %%X: %X\n", nb, str, 'A', 50, str, 42000, 42, 42);
-	printf("%d\n", (int)strlen(len));
-	count = ft_printf("%%d: %d %%s: %s %%c: %c %%i: %i %%p: %p %%u: %u %%x: %x %%X: %X\n", nb, str, 'A', 50, str, 42000, 42, 42);
-	printf("%d\n", count - 1);
+	str = NULL;
+	printf("%d", 42, 100, 200);
+	ft_printf("%d", 42, 100, 200);
 	return (0);
-}
+}*/
