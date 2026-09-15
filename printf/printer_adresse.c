@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 19:08:31 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 04:41:28 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 05:17:25 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 int	printer_adresse(void *str)
 {
-	char	adresse[17];
-	long	padresse;
-	char	*base;
-	int		i;
-	int		len;
+	char			adresse[17];
+	unsigned long	padresse;
+	char			*base;
+	int				i;
+	int				len;
 
 	base = "0123456789abcdef";
 	padresse = (unsigned long)str;

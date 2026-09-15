@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printer_unsigned_int.c                             :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/14 19:12:39 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 05:16:25 by elise            ###   ########.fr       */
+/*   Created: 2026/09/11 23:18:49 by elise             #+#    #+#             */
+/*   Updated: 2026/09/15 05:23:05 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft/libft.h"
-#include "ft_printf.h"
+#include "libft.h"
 
-int	numlen(long n);
-
-int	printer_unsigned_int(unsigned int nb)
+void	ft_putnbr_unsigned(unsigned int n)
 {
-	int				len;
-	unsigned int	n;
+	char	c;
 
-	n = (unsigned int)nb;
-	len = numlen(n);
-	ft_putnbr_unsigned(n);
-	return (len);
+	if (n > 9)
+		ft_putnbr_unsigned(n / 10);
+	c = (n % 10) + '0';
+	write(1, &c, 1);
 }
+
+/*int main(void)
+{
+	ft_putnbr_fd(-2147483648, 1);
+	return (0);
+}*/

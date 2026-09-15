@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 01:58:28 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 05:12:17 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 05:24:30 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	ft_printf(const char *format, ...)
 	int		count;
 	va_list	args;
 
-	if (check_error(format) == 0)
-	{
-		ft_putstr_fd("Invalid argument\n", 1);
-		return (-1);
-	}
+	//if (check_error(format) == 0)
+	//{
+	//	ft_putstr_fd("Invalid argument\n", 1);
+	//	return (-1);
+	//}
 	va_start(args, format);
 	i = 0;
 	count = 0;
@@ -48,7 +48,7 @@ int	ft_printf(const char *format, ...)
 	char	*str;
 
 	str = NULL;
-	printf("%d", 42, 100, 200);
+	printf("%d %y", 42);
 	ft_printf("%d", 42, 100, 200);
 	return (0);
 }*/
