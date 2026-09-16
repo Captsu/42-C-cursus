@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 17:49:59 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/14 19:22:45 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 17:26:24 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdio.h>
+# include <stdint.h>
 # include <stdlib.h>
 # include <string.h>
 

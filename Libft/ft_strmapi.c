@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 15:30:55 by elise             #+#    #+#             */
-/*   Updated: 2026/09/12 00:32:12 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/16 02:21:35 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
+	if (!s)
+		return (NULL);
 	str = malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!str)
 		return (NULL);

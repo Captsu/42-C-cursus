@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 15:49:05 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/09 17:56:12 by emougeno         ###   ########.fr       */
+/*   Updated: 2026/09/15 17:23:35 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	wordcount(char const *s, char c)
+static int	wordcount(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -31,7 +31,7 @@ int	wordcount(char const *s, char c)
 	return (count);
 }
 
-void	free_tab(char **tab, int len)
+static void	free_tab(char **tab, int len)
 {
 	int	i;
 
@@ -44,7 +44,7 @@ void	free_tab(char **tab, int len)
 	free(tab);
 }
 
-char	*get_word(char const *s, int start, int end)
+static char	*get_word(char const *s, int start, int end)
 {
 	char	*word;
 	int		i;
@@ -61,7 +61,7 @@ char	*get_word(char const *s, int start, int end)
 	return (word);
 }
 
-char	**split_helper(char **tab, char const *s, char c, int wc)
+static char	**split_helper(char **tab, char const *s, char c, int wc)
 {
 	int		start;
 	int		j;

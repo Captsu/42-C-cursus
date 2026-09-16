@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 05:29:48 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/09 05:56:02 by emougeno         ###   ########.fr       */
+/*   Updated: 2026/09/16 02:05:43 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*dest;
 	size_t	slen;
 
+	if (!s)
+		return (NULL);
 	slen = ft_strlen(s);
 	if (start >= slen)
 	{

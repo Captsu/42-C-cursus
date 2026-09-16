@@ -6,7 +6,7 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/11 22:25:06 by elise             #+#    #+#             */
-/*   Updated: 2026/09/12 00:30:13 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/16 02:28:15 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

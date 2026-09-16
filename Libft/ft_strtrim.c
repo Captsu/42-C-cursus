@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/09 21:32:15 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/10 17:09:51 by emougeno         ###   ########.fr       */
+/*   Updated: 2026/09/16 02:49:24 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*dest;
 
+	if (!s1)
+		return (NULL);
 	start = 0;
-	while (s1[start] && ft_strchr(set, s1[start]) != 0)
+	while (s1[start] && !!set && ft_strchr(set, s1[start]) != 0)
 		start++;
 	end = ft_strlen(s1);
-	while (end > start && ft_strchr(set, s1[end - 1]) != 0)
+	while (end > start && !!set && ft_strchr(set, s1[end - 1]) != 0)
 		end--;
 	dest = malloc(sizeof(char) * (end - start + 1));
 	if (!dest)
@@ -32,14 +34,16 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (dest);
 }
 
-/*int main(void)
-{
-	char	s1[] = "xxxsxyyyeexxxexxxxxyyyy";
-	char	set[] = "xy";
-	char	*dest;
+//int main(void)
+//{
+//	char	s1[] = "Your security is good?";
+//	char	set[] = "";
+//	char	*dest;
 
-	dest = ft_strtrim(s1, set);
-	printf("%s\n", dest);
-	free(dest);
-	return (0);
-}*/
+//	dest = ft_strtrim(NULL, NULL);
+//	if (!dest)
+//		return (-1);
+//	printf("%s\n", dest);
+//	free(dest);
+//	return (0);
+//}
