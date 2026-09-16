@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emougeno <emougeno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/05 16:05:31 by emougeno          #+#    #+#             */
-/*   Updated: 2026/09/05 18:38:59 by emougeno         ###   ########.fr       */
+/*   Updated: 2026/09/15 05:34:55 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ size_t	ft_strlen(const char *str)
 // int	main(void)
 // {
 // 	char	str[] = "test";
-// 	printf("%d\n", ft_strlen(str));
+// 	printf("%d\n", (int)ft_strlen(str));
 // 	return (0);
 // }

@@ -6,11 +6,11 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 03:49:46 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 03:55:49 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 05:28:56 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft/libft.h"
+#include "libft/libft.h"
 #include "ft_printf.h"
 
 int	numlen(long n)

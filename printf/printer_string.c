@@ -6,11 +6,11 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 19:06:56 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 05:03:31 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 05:29:30 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft/libft.h"
+#include "libft/libft.h"
 #include "ft_printf.h"
 
 int	printer_string(char *str)

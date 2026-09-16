@@ -6,11 +6,11 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 19:54:21 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 04:43:44 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 05:29:22 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft/libft.h"
+#include "libft/libft.h"
 #include "ft_printf.h"
 
 int	printer_hexa(unsigned int nb, char format)

@@ -6,12 +6,12 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 01:58:28 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 05:24:30 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 05:37:18 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "Libft/libft.h"
+#include "libft/libft.h"
 
 int	ft_printf(const char *format, ...)
 
@@ -42,13 +42,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-
-/*int	main(void)
-{
-	char	*str;
-
-	str = NULL;
-	printf("%d %y", 42);
-	ft_printf("%d", 42, 100, 200);
-	return (0);
-}*/

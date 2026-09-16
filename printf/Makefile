@@ -1,13 +1,14 @@
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 
-SRC =	Libft/ft_strlen.c \
-		Libft/ft_strchr.c \
- 		Libft/ft_putchar_fd.c \
- 		Libft/ft_putstr_fd.c \
- 		Libft/ft_putnbr_fd.c \
+SRC =	libft/ft_strlen.c \
+		libft/ft_strchr.c \
+ 		libft/ft_putchar_fd.c \
+ 		libft/ft_putstr_fd.c \
+ 		libft/ft_putnbr_fd.c \
+ 		libft/ft_putnbr_unsigned.c \
 		check_error.c \
 		ft_printf.c \
 		printer_adresse.c \

@@ -6,11 +6,11 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 19:18:01 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 02:58:38 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 05:31:25 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft/libft.h"
+#include "libft/libft.h"
 #include "ft_printf.h"
 
 int	check_error(const char *format)

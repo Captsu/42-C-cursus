@@ -6,11 +6,11 @@
 /*   By: elise <elise@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 02:22:50 by elise             #+#    #+#             */
-/*   Updated: 2026/09/15 04:34:57 by elise            ###   ########.fr       */
+/*   Updated: 2026/09/15 05:29:10 by elise            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft/libft.h"
+#include "libft/libft.h"
 #include "ft_printf.h"
 
 int	printer_decider(char c, va_list	args)
